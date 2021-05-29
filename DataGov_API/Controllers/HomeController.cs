@@ -20,7 +20,22 @@ namespace DataGov_API.Controllers
         // data.gov developer network, i.e. all data sources on data.gov.
         // https://www.nps.gov/subjects/developer/get-started.htm
 
+        [HttpGet]
+        public IActionResult Contact()
+        {
+            NewRecord contact = new NewRecord();
+                 
+            return View(contact);
+        }
+
+
+        [HttpPost]
+        public IActionResult Contact(NewRecord contact)
+        {
+            return View(contact);
+        }
         public IActionResult Index()
+
         {
             httpClient = new HttpClient();
             httpClient.DefaultRequestHeaders.Accept.Clear();

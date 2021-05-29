@@ -1,18 +1,23 @@
-﻿@model DataGov_API.Models.Parks
+﻿@*@model DataGov_API.Models.Park
 
 @{
     ViewData["Title"] = "Index";
 }
 
+
+
 <h2>Index</h2>
 
-@foreach (DataGov_API.Models.Park park in Model.data)
-{
-    @(park.parkCode + " " + park.fullName + " " + park.latLong)
-    <br />
-}
 
+<form asp-controller="Home" asp-action="Contact" method="post">
+    <p>Name: <input asp-for="Name" /></p>
+    <p>Email: <input asp-for="Email" /></p>
+    <p>Phone number: <input asp-for="Phone" /></p>
 
+    <button type="submit">Submit</button>
+</form>
 
-<a href="https://www.google.com/travel/flights/search?tfs=CBwQAhopag0IAhIJL20vMGdwNzF4EgoyMDIxLTA2LTEzcgwIAhIIL20vMGdxa2QaKWoMCAISCC9tLzBncWtkEgoyMDIxLTA2LTE3cg0IAhIJL20vMGdwNzF4cAGCAQsI____________AUABSAGYAQE">Trip to Japan?</a>
+<a href="/home/index">Home page in html</a>
+
+<a href="https://www.google.com/travel/flights/search?tfs=CBwQAhopag0IAhIJL20vMGdwNzF4EgoyMDIxLTA2LTEzcgwIAhIIL20vMGdxa2QaKWoMCAISCC9tLzBncWtkEgoyMDIxLTA2LTE3cg0IAhIJL20vMGdwNzF4cAGCAQsI____________AUABSAGYAQE">Trip to Japan?</a>*@
 

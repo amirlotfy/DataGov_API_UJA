@@ -1,0 +1,25 @@
+﻿
+@model DataGov_API.Models.NewRecord
+
+<h2>Index</h2>
+
+
+<p>Name: @Model.Name</p>
+<p>Email: @Model.EmailID</p>
+<p>Phone number: @Model.Mobile</p>
+
+
+
+<form asp-controller="Home" asp-action="Contact" method="post">
+    <p>Name: <input asp-for="Name" /></p>
+    <p>Email: <input asp-for="EmailID" /></p>
+    <p>Email: <input asp-for="Address" /></p>
+    <p>Phone number: <input asp-for="Mobile" /></p>
+
+    <button type="submit">Submit</button>
+</form>
+
+<a href="/home/index">Home page in html</a>
+
+<a href="https://www.google.com/travel/flights/search?tfs=CBwQAhopag0IAhIJL20vMGdwNzF4EgoyMDIxLTA2LTEzcgwIAhIIL20vMGdxa2QaKWoMCAISCC9tLzBncWtkEgoyMDIxLTA2LTE3cg0IAhIJL20vMGdwNzF4cAGCAQsI____________AUABSAGYAQE">Trip to Japan?</a>
+
